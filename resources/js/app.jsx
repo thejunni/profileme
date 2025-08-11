@@ -14,7 +14,7 @@ const translations = {
     introduction: "— Introduction",
     role: "Web Developer, based in Bali, Indonesia.",
     description:
-      "I am a developer focusing on Laravel, React, and API integration. Building modern, fast, and elegant applications for various business needs.",
+      " I am a Website Developer with experience in several programming languages such as PHP, Go, and JavaScript. I have approximately 2 years of experience (2022 – 2024) in the programming world. I have also completed my Bachelor's degree at INSTIKI in 2025. In terms of skills, I have a deep understanding of the LARAVEL framework.",
     story: "My story →",
     contact: "— Contact",
     query: "Any Type Of Query & Discussion.",
@@ -28,7 +28,7 @@ const translations = {
     introduction: "— Perkenalan",
     role: "Pengembang Web, berbasis di Bali, Indonesia.",
     description:
-      "Saya adalah seorang developer yang fokus pada Laravel, React, dan integrasi API. Membangun aplikasi modern, cepat, dan elegan untuk berbagai kebutuhan bisnis.",
+      "Saya adalah seorang Pengembang Website dengan pengalaman dalam beberapa bahasa pemrograman seperti PHP, Go, dan JavaScript. Saya memiliki pengalaman sekitar 2 tahun (2022 – 2024) di dunia pemrograman. Saat ini, Saya juga telah menyelesaikan pendidikan Sarjana di INSTIKI pada tahun 2025. Dalam hal keterampilan, saya memiliki pemahaman yang mendalam mengenai framework LARAVEL",
     story: "Cerita saya →",
     contact: "— Kontak",
     query: "Segala Jenis Pertanyaan & Diskusi.",
