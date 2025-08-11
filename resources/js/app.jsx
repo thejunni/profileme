@@ -1,22 +1,4 @@
 
-// import React from 'react';
-// import ReactDOM from 'react-dom/client';
-// import Home from './pages/Home';
-
-// export default function App() {
-//     return (
-//         <div>
-//             <Home />
-//         </div>
-//     );
-// }
-
-// // Pastikan elemen #app ada di Blade template, misalnya di app.blade.php
-// const rootElement = document.getElementById('app');
-// if (rootElement) {
-//     const root = ReactDOM.createRoot(rootElement);
-//     root.render(<App />);
-// }
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
