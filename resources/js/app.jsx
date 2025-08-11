@@ -1,0 +1,144 @@
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom/client";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import profileImg from "../images/profile.png";
+import "../css/app.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+const translations = {
+  en: {
+    home: "Home",
+    github: "GitHub",
+    linkedin: "LinkedIn",
+    introduction: "— Introduction",
+    role: "Web Developer, based in Bali, Indonesia.",
+    description:
+      "I am a developer focusing on Laravel, React, and API integration. Building modern, fast, and elegant applications for various business needs.",
+    story: "My story →",
+    contact: "— Contact",
+    query: "Any Type Of Query & Discussion.",
+    footerQuote:
+      "You can’t use up creativity, the more you use, the more you have in your significant mind.",
+  },
+  in: {
+    home: "Beranda",
+    github: "GitHub",
+    linkedin: "LinkedIn",
+    introduction: "— Perkenalan",
+    role: "Pengembang Web, berbasis di Bali, Indonesia.",
+    description:
+      "Saya adalah seorang developer yang fokus pada Laravel, React, dan integrasi API. Membangun aplikasi modern, cepat, dan elegan untuk berbagai kebutuhan bisnis.",
+    story: "Cerita saya →",
+    contact: "— Kontak",
+    query: "Segala Jenis Pertanyaan & Diskusi.",
+    footerQuote:
+      "Kreativitas tidak akan habis dipakai, semakin sering digunakan, semakin banyak yang kamu miliki di pikiranmu.",
+  },
+};
+
+function App() {
+  const [lang, setLang] = useState("en");
+
+  // Ambil bahasa dari localStorage saat pertama kali load
+  useEffect(() => {
+    const savedLang = localStorage.getItem("lang");
+    if (savedLang) {
+      setLang(savedLang);
+    }
+  }, []);
+
+  // Simpan bahasa ke localStorage setiap kali berubah
+  const toggleLang = () => {
+    const newLang = lang === "en" ? "in" : "en";
+    setLang(newLang);
+    localStorage.setItem("lang", newLang);
+  };
+
+  const t = translations[lang];
+
+  return (
+    <div style={{ backgroundColor: "#1e1e2f", color: "white", minHeight: "100vh" }}>
+      {/* Navbar */}
+      <nav className="py-4">
+        <div className="container d-flex justify-content-between align-items-center">
+          {/* Toggle Button */}
+          <button className="btn btn-sm btn-warning fw-bold" onClick={toggleLang}>
+            {lang.toUpperCase()}
+          </button>
+
+          {/* Menu */}
+          <div className="d-flex gap-4">
+            <a
+              href="/"
+              className="text-white fw-semibold border-bottom border-warning pb-1 text-decoration-none"
+            >
+              {t.home}
+            </a>
+            <a href="https://github.com/thejunni" className="text-secondary text-decoration-none">
+              {t.github}
+            </a>
+            <a href="https://www.linkedin.com/in/dejuniartaa/" className="text-secondary text-decoration-none">
+              {t.linkedin}
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <div className="container py-5">
+        <div className="row align-items-center g-5">
+          {/* Kiri - Foto & Nama */}
+          <div className="col-md-6 text-center text-md-start">
+            <img src={profileImg} alt="Profile" style={{ maxWidth: "300px" }} />
+            <h1 className="fw-bold display-4 lh-sm">I Gede Juniarta.</h1>
+            <div className="mt-3 fs-4">
+              <a
+                href="https://www.instagram.com/igedejuniartaa/"
+                className="text-secondary me-3"
+              >
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="https://github.com/thejunni" className="text-secondary me-3">
+                <i className="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/dejuniartaa/"
+                className="text-secondary"
+              >
+                <i className="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          {/* Kanan - Deskripsi */}
+          <div className="col-md-6">
+            <p className="text-uppercase text-secondary small mb-2">{t.introduction}</p>
+            <h2 className="h4 fw-semibold mb-4">{t.role}</h2>
+            <p className="text-secondary mb-4">{t.description}</p>
+            <a href="#" className="fw-semibold text-warning text-decoration-none">
+              {t.story}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer Info */}
+      <div className="border-top border-secondary py-5">
+        <div className="container">
+          <div className="row g-4">
+            <div className="col-md-6">
+              <p className="text-uppercase text-secondary small mb-2">{t.contact}</p>
+              <p className="h5">{t.query}</p>
+            </div>
+            <div className="col-md-6">
+              <p className="text-secondary mb-0">{t.footerQuote}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("app")).render(<App />);
