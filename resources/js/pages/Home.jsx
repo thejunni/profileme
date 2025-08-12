@@ -100,9 +100,6 @@ export default function Home() {
             <p className="text-uppercase text-secondary small mb-2">{t.introduction}</p>
             <h2 className="h4 fw-semibold mb-4">{t.role}</h2>
             <p className="text-secondary mb-4 text-justify">{t.description}</p>
-            {/* <a href="/story" className="fw-semibold text-warning text-decoration-none">
-              {t.story}
-            </a> */}
             <Link to="/story" className="fw-semibold text-warning text-decoration-none">
               {t.story}
             </Link>

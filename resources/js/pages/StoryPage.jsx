@@ -26,6 +26,10 @@ const translations = {
       "I aspire to continuously develop my skills in technology and create products that benefit many people.",
     footerQuote:
       "You can’t use up creativity, the more you use, the more you have in your significant mind.",
+    story1: "All Story →",
+    story2: "Journey →",
+    story3: "Education →",
+    story4: "Vision & Mision →",
   },
   in: {
     back: "← Kembali",
@@ -47,6 +51,10 @@ const translations = {
       "Saya bercita-cita untuk terus mengembangkan skill di dunia teknologi dan menciptakan produk yang bermanfaat bagi banyak orang.",
     footerQuote:
       "Kreativitas tidak akan habis dipakai, semakin sering digunakan, semakin banyak yang kamu miliki di pikiranmu.",
+    story1: "Semua Cerita →",
+    story2: "Perjalanan  →",
+    story3: "Pendidikan →",
+    story4: "Visi dan Misi →",
   },
 };
 
@@ -82,7 +90,7 @@ export default function StoryPage() {
           </button>
             <Link
               to="/"
-              className="text-white fw-semibold border-bottom border-warning pb-1 text-decoration-none"
+              className="text-white fw-semibold border-warning pb-1 text-decoration-none"
             >
               {t.home}
             </Link>
@@ -110,6 +118,9 @@ export default function StoryPage() {
             <div className="p-4 bg-dark rounded shadow-sm h-100">
               <h4 className="fw-bold text-warning">{t.intro1Title}</h4>
               <p className="text-secondary mb-0 text-justify">{t.intro1Text}</p>
+              <Link to="/story" className="fw-semibold text-warning text-decoration-none">
+                {t.story1}
+              </Link>
             </div>
           </div>
 
@@ -117,6 +128,9 @@ export default function StoryPage() {
             <div className="p-4 bg-dark rounded shadow-sm h-100">
               <h4 className="fw-bold text-warning">{t.intro2Title}</h4>
               <p className="text-secondary mb-0 text-justify">{t.intro2Text}</p>
+              <Link to="/story" className="fw-semibold text-warning text-decoration-none">
+                {t.story2}
+              </Link>
             </div>
           </div>
 
@@ -124,6 +138,9 @@ export default function StoryPage() {
             <div className="p-4 bg-dark rounded shadow-sm h-100">
               <h4 className="fw-bold text-warning">{t.intro3Title}</h4>
               <p className="text-secondary mb-0 text-justify">{t.intro3Text}</p>
+              <Link to="/story" className="fw-semibold text-warning text-decoration-none">
+                {t.story3}
+              </Link>
             </div>
           </div>
 
@@ -131,6 +148,9 @@ export default function StoryPage() {
             <div className="p-4 bg-dark rounded shadow-sm h-100">
               <h4 className="fw-bold text-warning">{t.intro4Title}</h4>
               <p className="text-secondary mb-0 text-justify">{t.intro4Text}</p>
+              <Link to="/story" className="fw-semibold text-warning text-decoration-none">
+                {t.story4}
+              </Link>
             </div>
           </div>
         </div>
